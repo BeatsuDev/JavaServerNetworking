@@ -39,4 +39,4 @@ Replace <password> in the following commands with the password you created in th
 
 `Client Terminal:`
     javac JavaSSLClient.java
-    java -Djavax.net.ssl.keyStore=examplestore -Djavax.net.ssl.keyStorePassword=<password> JavaSSLClient
+    java -Djavax.net.ssl.trustStore=examplestore -Djavax.net.ssl.trustStorePassword=<password> JavaSSLClient
