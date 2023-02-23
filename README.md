@@ -24,3 +24,19 @@ You can use netcat for UDP connections.
 
 `Client Terminal:`
     nc -u 127.0.0.1 1234
+
+# Connecting to SSL Server
+Run these commands before you run the server or client terminal:
+Remember the password the you create in this step!
+
+    keytool -genkey -alias signFiles -keystore examplestore
+
+Replace <password> in the following commands with the password you created in the previous step:
+
+`Server Terminal:`
+    javac JavaSSLServer.java
+    java -Djavax.net.ssl.keyStore=examplestore -Djavax.net.ssl.keyStorePassword=<password> JavaSSLServer
+
+`Client Terminal:`
+    javac JavaSSLClient.java
+    java -Djavax.net.ssl.keyStore=examplestore -Djavax.net.ssl.keyStorePassword=<password> JavaSSLClient
