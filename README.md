@@ -29,7 +29,7 @@ You can use netcat for UDP connections.
 Run these commands before you run the server or client terminal:
 Remember the password the you create in this step!
 
-    keytool -genkey -alias signFiles -keystore examplestore
+    keytool -genkey -alias signFiles -keyalg RSA -keystore examplestore
 
 Replace <password> in the following commands with the password you created in the previous step:
 
