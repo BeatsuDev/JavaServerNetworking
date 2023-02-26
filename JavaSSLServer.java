@@ -12,7 +12,7 @@ import javax.net.ssl.SSLServerSocketFactory;
  * @web http://java-buddy.blogspot.com/
  */
 public class JavaSSLServer {
-    static final int port = 8081;
+    static final int port = 8085;
     public static void main(String[] args) {
         SSLServerSocketFactory sslServerSocketFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 

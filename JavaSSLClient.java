@@ -12,7 +12,7 @@ import javax.net.ssl.SSLSocketFactory;
  * @web http://java-buddy.blogspot.com/
  */
 public class JavaSSLClient {
-    static final int port = 8081;
+    static final int port = 8085;
     public static void main(String[] args) {
         SSLSocketFactory sslSocketFactory = (SSLSocketFactory)SSLSocketFactory.getDefault();
         try {
@@ -30,9 +30,10 @@ public class JavaSSLClient {
                     System.out.println(bufferedReader.readLine());
                 }
             }
+            socket.close();  // I think this might be redundant
         } catch (IOException ex) {
             Logger.getLogger(JavaSSLClient.class.getName())
                     .log(Level.SEVERE, null, ex);
-        }    
+        }
     }
 }
